@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Fooder</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  </style>
+</head>
+<body>
+
+
+
+ <!-- nav bar -->
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="recipepage">Main page</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+            <li><a href="/add_recipe"><span class="glyphicon glyphicon-cutlery"></span> Add a recipe </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span> <input placeholder="Search"> </a></li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Options  -->
+<form action="{{ url_for('add_recipe_route' )}}" method="post">
+        
+        <div class="container">
+            <div class="container container2">
+            <div class="title">
+            <h1>Add a recipe</h1>
+            
+            </div>
+
+            Recipe name:
+            <br>
+            <input type="text" name="name" placeholder="recipe name" class="input">
+            <br> Description
+            <br>
+            <textarea rows="4" cols="50" name="desc" class="input"></textarea>
+            <br>
+            <!-- <br> Email:
+            <br>
+            <input type="email" name="Email" placeholder="name@gmail.com" class="input">
+            <br> -->
+            Ingredients(separate the ingredients with commas):
+            <br>
+            <input type="text" name="ingredients" placeholder="Recipe ingredients" class="input">
+            <br>
+            <br>
+            Cooking time:
+            <br>
+            <input type="text" name="time" placeholder="Cooking time" class="input">
+            <br>
+            <br>
+            <button type="submit" class="registerbtn">Upload</button>
+            
+            <br>
+            
+            Already have an account?
+            <a href="/">click here </a>
+        </div>
+    </div>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<br>
+
+<!-- <footer class="container-fluid text-center"> 
+  <form class="form-inline">Get deals:
+    <input type="email" class="form-control" size="50" placeholder="Email Address">
+    <button type="button" class="btn btn-danger">Sign Up</button>
+  </form>
+</footer> -->
+
+</body>
+</html>

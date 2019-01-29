@@ -52,7 +52,7 @@ def login():
 @app.route('/recipepage')
 def recipepage():
     # if session.get("loggedin") == True:
-    return render_template('recipepage.html', recipes=get_recipes())
+    return render_template('recipepage.html', recipe=get_recipes())
     # else:
     #     return redirect(url_for("login"))
 
@@ -74,7 +74,7 @@ def srecipe(recipename):
     # if session.get("loggedin") == True:
     recipename=get_recipe_by_name()
     recipe=get_recipe_by_name()
-    return render_template('srecipe.html', recipes=get_recipes())
+    return render_template('srecipe.html', recipe=get_recipes())
 
 @app.route('/log_out')
 def log_out():
@@ -87,7 +87,7 @@ def profiles():
         return render_template('profile.html', accounts= get_all_accounts(), ) 
     else:
         return render_template('login.html')
-    
+
 
 if __name__ == '__main__':
     app.run(debug=True)

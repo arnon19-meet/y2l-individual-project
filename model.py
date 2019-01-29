@@ -24,3 +24,4 @@ class Recipe(Base):
     recipe_desc = Column(String)
     recipe_ingredients = Column(String)
     recipe_time = Column(Integer)
+    

@@ -1,0 +1,58 @@
+<DOCTYPE! html>
+    <html>
+
+    <head>
+
+        <title>Register</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register.css') }}">
+    </head>
+    <body>
+    
+        <div class="container">
+            <h1>Register</h1>
+            
+
+            <div class="sidebar">
+            
+            <div class="content">
+                <form action="/register_account" method="POST">
+                    Full-name:
+                    <br>
+                    <input type="text" name="fullname" placeholder="Full name" class="input">
+                    <br> 
+                    Password:
+                    <br>
+                    <input type="password" name="password" placeholder="Password" class="input">
+                    <br> Reapeat password:
+                    <br>
+                    <input type="password" name="check_pwd" placeholder="Repeat Password" class="input">
+                    <br> Email:
+                    <br>
+                    <input type="email" name="Email" placeholder="name@gmail.com" class="input">
+                    <br> Birthday:
+                    <br>
+                    <input type="text" name="birthday" placeholder="DD/MM/YY" class="input">
+                    <br>
+
+                    <button type="submit" class="registerbtn">Register</button>
+                    <br>
+                        Already have an account?
+                        <a href="/">click here </a>
+                </div>
+            </form>
+                <br>
+                <br>
+                <br>
+                <br>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    </html>
