@@ -12,8 +12,8 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 # Your database functions are located under here (querying, adding items, etc.)
-def add_recipe(recipe_name,recipe_desc,recipe_ingredients,recipe_time):
-    recipe = Recipe(recipe_name=recipe_name, recipe_desc=recipe_desc, recipe_ingredients=recipe_ingredients, recipe_time=recipe_time)
+def add_recipe(recipe_name,recipe_desc,recipe_ingredients,recipe_time, recipe_image):
+    recipe = Recipe(recipe_name=recipe_name, recipe_desc=recipe_desc, recipe_ingredients=recipe_ingredients, recipe_time=recipe_time, )
     session.add(recipe)
     session.commit()
 
