@@ -9,25 +9,37 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
     /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    body {
+      background-image: url('static/images/4fooder_background.jpg');
+    }
     .navbar {
       margin-bottom: 50px;
       border-radius: 0;
     }
     
     /* Remove the jumbotron's default bottom margin */ 
-     .jumbotron {
-      margin-bottom: 0;
+
+    h1{font-size:63px;
+    color: white;
+    font-family: "Lucida Console", Monaco, monospace;
     }
-   
     /* Add a gray background color and some padding to the footer */
     footer {
-      background-color: #f2f2f2;
+      /* background-color: #f2f2f2; */
       padding: 25px;
     }
-    
+    a{
+      color: blanchedalmond;
+      
+    }
+    a:hover{
+      color: rgb(11, 22, 51)
+    }
   </style>
 </head>
-<body>
+<body background="wood.jpg">
+
+
  <!-- nav bar -->
 
 <nav class="navbar navbar-inverse">
@@ -42,6 +54,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
+          
           <li><a href="/add_recipe"><span class="glyphicon glyphicon-cutlery"></span> Add a recipe </a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -51,18 +64,57 @@
     </div>
   </div>
 </nav>
-
+<img src="wood.jpg"  width="10" height="100">
 <!-- Options  -->
-{% for recipe in recipe %}
-<div class="jumbotron"> 
+
+<!-- <div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Vegeterian</div>
+        <div class="panel-body"><a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+       </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-danger">
+        <div class="panel-heading">Meat</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div> -->
+        <!-- <div class="panel-footer">Buy 50 mobiles and get a gift card</div> -->
+      <!-- </di{% for recipe in recipe %}
+ 
     <div class="container text-center">
       <h1> <div class="panel-body"><a href="{{ url_for('srecipe', recipename= recipe.recipe_name) }}">Recipes</a></div></h1>      
     
     </div>
   </div>
 
-{% endfor %}
-<br>
+{% endfor %}v>
+    </div>
+      -->
+      
+
+ 
+      <div class="container text-center">
+        <h1> <div class="panel-body"><a href='/srecipe/Recipes'>Recipes</a></div></h1>      
+      
+      </div>
+    </div>
+  
+
+    
+  </div>
+</div>
+<!--  -->
+     <!-- <div class="col-sm-4">  --> 
+      <!-- <div class="panel panel-success"> -->
+        <!-- <div class="panel-heading">Desert</div> -->
+        <!-- <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div> --> 
+        <!-- <div class="panel-footer">Buy 50 mobiles and get a gift card</div> -->
+      <!-- </div>
+    </div>
+  </div>
+</div><br> -->
 
 <br>
 
@@ -75,3 +127,6 @@
 
 </body>
 </html>
+
+
+
