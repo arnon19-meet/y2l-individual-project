@@ -9,9 +9,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
     /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+
     body {
-      background-image: url('static/images/4fooder_background.jpg');
-    }
+    background-image:    url('static/images/4fooder_background.jpg');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;              /* optional, center the image */
+  }
     .navbar {
       margin-bottom: 50px;
       border-radius: 0;
