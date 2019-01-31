@@ -18,7 +18,7 @@ class Account_info(Base):
     email=Column(String)
 
 class Recipe(Base):
-    __tablename__ = "recipe"
+    __tablename__ = "Drecipe"
     id = Column(Integer, primary_key = True)
     recipe_name = Column(String)
     recipe_desc = Column(String)
